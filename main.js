@@ -24,7 +24,7 @@ function factorialize(num) {
     return num * factorialize(num - 1);
   }
 }
-findFactorial(6) // => 720
+findFactorial(6); // => 720
 
 //---//
 
@@ -138,7 +138,7 @@ const onlyString = function (array) {
   }
   return newArr;
 };
-onlyString(["one",12,"hi",true , 88 , "12"]); // => ["one","hi","12"]
+onlyString(["one", 12, "hi", true, 88, "12"]); // => ["one","hi","12"]
 
 //---//
 
@@ -149,24 +149,24 @@ const users = [
 ];
 const login = function (username, password) {
   for (i = 0; i < users.length; i++) {
-    if ((users[i] == username, password)) {
-      console.log("Login Successful");
-    } else {
-      console.log("Login Failed");
+    if (users[i][0] == username && users[i][1] == password) {
+      return "Login Successful";
     }
   }
+  return "Login Failed";
 };
 login("Jane", "123456"); // => "Login Successful"
+login("Jane", "5321"); // => "Login Failed"
 
 //---//
 
 // Q6.
 const maximumNumber = function (numbers) {
-    let maximum = numbers[0];
+  let maximum = numbers[0];
   for (i = 0; i < numbers.length; i++) {
     if (numbers[i] > maximum) {
-        maximum = numbers[i]
-    } 
+      maximum = numbers[i];
+    }
   }
   return maximum;
 };
