@@ -17,12 +17,12 @@ average(20, 5); // => 12.5
 //---//
 
 // Q3.
-function factorialize(num) {
-  if (num < 0) return -1;
-  else if (num == 0) return 1;
-  else {
-    return num * factorialize(num - 1);
+function findFactorial(num) {
+  let answ = 1;
+  for (i = num; i >= 1; i--) {
+    answ = answ * i;
   }
+  return answ;
 }
 findFactorial(6); // => 720
 
